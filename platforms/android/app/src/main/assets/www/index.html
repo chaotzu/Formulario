@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <link rel="stylesheet" type="text/css" href="js/jquery-1.5.0.mobile.min.css">
+        
+		<style>
+		/* For avoiding title truncation in wp8 */
+		.ui-header .ui-title {
+				overflow: visible !important;
+		}
+		/* For fixing the absolute position issue for the default cordova gen page*/
+		#cjp-accordion1 .app {
+				left: 5px !important;
+				margin: 5px !important;
+				position: relative !important;
+		}
+		</style>
+        <title>Hello World</title>
+    </head>
+    <body>		<!-- page 1 -->
+		<div data-role="page" id="page1">
+			<div data-role="header">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#page1" class="ui-btn-active ui-state-persist">Captura</a></li>
+						<li><a href="#page2">Busqueda</a></li>
+						<li><a href="#page3">Borrar</a></li>
+					</ul>
+				</div><!-- /navbar -->
+			</div>
+			
+			<div class="ui-content">
+                <input type="text" id="nombre">Nombre</input>
+                <input type="text" id="rfc">RFC</input>
+                <input type="number" id="edad">Edad</input>
+                <input type="tel" id="telefono">Telefono</input>
+                <input type="text" id="latitud">Latitud</input>
+                <input type="text" id="longitud">Longitud</input>
+                <button id="guardar">Guardar</button>
+            </div><!-- end page 1 content -->
+			
+			<div data-role="footer" data-position="fixed">
+				<h1>Captura</h1>
+			</div><!-- /footer -->
+		</div>
+		<!-- /page1 -->
+
+				<!-- page 2 -->
+		<div data-role="page" id="page2">
+			<div data-role="header">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#page1">Captura</a></li>
+						<li><a href="#page2" class="ui-btn-active ui-state-persist">Busqueda</a></li>
+						<li><a href="#page3">Borrar</a></li>
+					</ul>
+				</div><!-- /navbar -->	
+			</div>
+			
+			<div class="ui-content">
+                <input type="text" id="textoBuscar">Buscar</input>                
+                <input type="checkbox" id="chkNombre" class="check" value="nomb">Nombre</input>
+                <button id="buscarBoton">Buscar</button>
+			</div><!-- end page 2 content -->
+			
+			<div data-role="footer" data-position="fixed">
+				<h1>Busqueda</h1>
+			</div><!-- /footer -->
+		</div><!-- /page2 -->
+		
+				<!-- page 3 -->
+		<div data-role="page" id="page3">
+			<div data-role="header">				<div data-role="navbar">
+					<ul>
+						<li><a href="#page1">Captura</a></li>
+						<li><a href="#page2">Busqueda</a></li>
+						<li><a href="#page3" class="ui-btn-active ui-state-persist">Page 3</a></li>
+					</ul>
+				</div><!-- /navbar -->
+			</div>
+			
+			<div class="ui-content">
+				<input type="text" id="borrarNombre">Borrar</input>
+                <input type="checkbox" name="chkBNombre" value="NombreB">Nombre<br>
+                <input type="checkbox" name="chkBRFC" value="RfcB" checked>RFC<br>
+                <button id="borrarBoton">Borrar</button>
+			</div><!-- end page 3 content -->
+			
+			<div data-role="footer" data-position="fixed">
+				<h1>Borrar</h1>
+			</div><!-- /footer -->
+		</div><!-- /page3 -->
+<script type="text/javascript" src="cordova.js"></script><script type="text/javascript" src="js/jquery-1.11.1.min.js" id="cordova-jquery"></script><script type="text/javascript" id="jqm-trans-disable">
+		/* For having a faster transition */
+		$(document).on("mobileinit", function() {
+				$.mobile.defaultPageTransition = "none";
+				$.mobile.defaultDialogTransition = "none";
+		});
+        </script><script type="text/javascript" src="js/jquery-1.5.0.mobile.min.js"></script><script type="text/javascript" src="js/index.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        </body>
+</html>
